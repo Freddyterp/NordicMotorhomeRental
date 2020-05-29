@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
     <div th:replace="fragments/header_scripts"> </div>
-    <title>Hello, world!</title>
 </head>
 <body>
 <div th:replace="fragments/top_menu"> </div>
-<div class="container" >customer
-    <h1> Update </h1>
+<div class="container">
+    <h1> Update Customer </h1>
     <form action="/updateCustomer" method="post">
             <input type="hidden" name="idCustomers" th:value="${customer.idCustomers}">
         <div class="form-group">
@@ -19,19 +18,19 @@
             <input type="text" name="lName" th:value="${customer.lName}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>Adresse:</p>
+            <p>Address:</p>
             <input type="text" name="Address" th:value="${customer.Address}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>Phone number</p>
+            <p>Phone number:</p>
             <input type="number" name="phone_number" th:value="${customer.phone_number}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>email</p>
+            <p>Email:</p>
             <input type="email" name="email" th:value="${customer.email}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>Driver License</p>
+            <p>Driver License:</p>
             <input type="text" name="driverlicense" th:value="${customer.driverlicense}" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Update</button>

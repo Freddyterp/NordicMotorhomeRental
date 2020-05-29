@@ -1,44 +1,42 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <link   rel="stylesheet" href="../main.css">
-
-    <title>Hello, world!</title>
+    <div th:replace="fragments/header_scripts"> </div>
 </head>
 <body>
+<div th:replace="fragments/top_menu"> </div>
 <div class="container">
 
     <h1>Add Customer</h1>
     <form action="/createCustomer" method="post">
         <div class="form-group">
-            <input type="text" name="fName" class="form-control" placeholder="please enter first name ">
+            <p>First Name:</p>
+            <input type="text" name="fName" class="form-control" placeholder="please enter first name" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="lName" class="form-control" placeholder="Please enter last name ">
+            <p>Last Name:</p>
+            <input type="text" name="lName" class="form-control" placeholder="Please enter last name" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="Address" class="form-control" placeholder="please enter address ">
+            <p>Address:</p>
+            <input type="text" name="Address" class="form-control" placeholder="please enter address" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="phone_number" class="form-control" placeholder="please enter phone nummber ">
+            <p>Phone Number:</p>
+            <input type="number" name="phone_number" class="form-control" placeholder="please enter phone number" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="email" class="form-control" placeholder="please enter email ">
+            <p>Email:</p>
+            <input type="email" name="email" class="form-control" placeholder="please enter email" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="driverlicense" class="form-control" placeholder="please enter driver license ">
+            <p>Driver's license</p>
+            <input type="text" name="driverlicense" class="form-control" placeholder="please enter driver's license" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -47,10 +45,7 @@
 
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<div th:replace="fragments/bottom_scripts"> </div>
+
 </body>
 </html>

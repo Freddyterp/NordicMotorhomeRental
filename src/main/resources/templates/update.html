@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
     <div th:replace="fragments/header_scripts"> </div>
-    <title>Hello, world!</title>
 </head>
 <body>
 <div th:replace="fragments/top_menu"> </div>
@@ -11,30 +10,29 @@
     <form action="/update" method="post">
         <input type="hidden" name="idCars" th:value="${car.idCars}">
         <div class="form-group">
-            <p>First Name:</p>
+            <p>Model:</p>
             <input type="text" name="model" th:value="${car.model}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>Last Name:</p>
+            <p>Brand:</p>
             <input type="text" name="brand" th:value="${car.brand}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>:</p>Year of Manufacture
+            <p>Year of manufacture</p>
             <input type="number" name="yearOfManufacture" th:value="${car.yearOfManufacture}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>CPR:</p>
+            <p>Year of purchase:</p>
             <input type="number" name="yearOfPurchase" th:value="${car.yearOfPurchase}" class="form-control" required>
         </div>
         <div class="form-group">
-            <p>First Name:</p>
+            <p>Number of Sleeping spots:</p>
             <input type="number" name="sleepingSpots" th:value="${car.sleepingSpots}" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
     </form>
 </div>
-<div th:replace="fragments/bottom_scripts">
-</div>
+<div th:replace="fragments/bottom_scripts"></div>
 </div>
 </body>
 </html>

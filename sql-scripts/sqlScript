@@ -81,6 +81,7 @@ INSERT INTO `users` (`username`,`password`,`role`,`enabled`)
 VALUES ('admin',
 '$2y$12$YcezAHiZ/Nln5TmG8oXmi.qfs1Gem0XohkRCQh.VoMXfnpTolnBl2',
 'ROLE_ADMIN', 1);
+
 INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('1', 'Explorer', 'Ford', '2018', '2019', '6');
 INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('2', 'Revel', 'Winnebago', '2010', '2018', '8');
 INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('3', 'Scooby', 'Mystery Van', '1972', '2020', '5');
