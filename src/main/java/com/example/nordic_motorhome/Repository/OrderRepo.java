@@ -2,9 +2,8 @@ package com.example.nordic_motorhome.Repository;
 
 
 import com.example.nordic_motorhome.Models.Order;
-import com.example.nordic_motorhome.OrderMapper;
+import com.example.nordic_motorhome.Service.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
