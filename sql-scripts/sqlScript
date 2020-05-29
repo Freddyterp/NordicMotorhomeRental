@@ -81,3 +81,15 @@ INSERT INTO `users` (`username`,`password`,`role`,`enabled`)
 VALUES ('admin',
 '$2y$12$YcezAHiZ/Nln5TmG8oXmi.qfs1Gem0XohkRCQh.VoMXfnpTolnBl2',
 'ROLE_ADMIN', 1);
+INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('1', 'Explorer', 'Ford', '2018', '2019', '6');
+INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('2', 'Revel', 'Winnebago', '2010', '2018', '8');
+INSERT INTO `mydb`.`cars` (`idCars`, `model`, `brand`, `yearOfManufacture`, `yearOfPurchase`, `sleepingSpots`) VALUES ('3', 'Scooby', 'Mystery Van', '1972', '2020', '5');
+
+INSERT INTO `mydb`.`customers` (`idCustomers`, `fName`, `lName`, `Address`, `phone_number`, `email`, `driverlicense`) VALUES ('1', 'Theis', 'Nielsen', 'Langvej 82', '12345678', 'theis@mail.dk', '7834903');
+INSERT INTO `mydb`.`customers` (`idCustomers`, `fName`, `lName`, `Address`, `phone_number`, `email`, `driverlicense`) VALUES ('2', 'Benjamin', 'Prehn', 'Kortvej 92', '98765432', 'Benjamin@mail.dk', '09234765');
+INSERT INTO `mydb`.`customers` (`idCustomers`, `fName`, `lName`, `Address`, `phone_number`, `email`, `driverlicense`) VALUES ('3', 'Frederik', 'Terp', 'Mellemvej 23', '56473839', 'Fred@mail.dk', '12347303');
+INSERT INTO `mydb`.`customers` (`idCustomers`, `fName`, `lName`, `Address`, `phone_number`, `email`, `driverlicense`) VALUES ('4', 'Mudi', 'Sabah', 'Storevej 65', '19283746', 'Mudi@mail.dj', '76935746');
+
+INSERT INTO `mydb`.`orders` (`idOrders`, `price`, `reservationDate`, `startDate`, `endDate`, `Cars_idCars`, `Customers_idCustomers`) VALUES ('1', '0', '2020-05-02', '2020-05-04', '2020-05-06', '1', '2');
+INSERT INTO `mydb`.`orders` (`idOrders`, `price`, `reservationDate`, `startDate`, `endDate`, `Cars_idCars`, `Customers_idCustomers`) VALUES ('2', '0', '2020-05-07', '2020-05-08', '2020-05-10', '2', '3');
+INSERT INTO `mydb`.`orders` (`idOrders`, `price`, `reservationDate`, `startDate`, `endDate`, `Cars_idCars`, `Customers_idCustomers`) VALUES ('3', '0', '2020-05-09', '2020-05-10', '2020-05-12', '3', '4');
