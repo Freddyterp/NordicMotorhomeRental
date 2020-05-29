@@ -13,32 +13,33 @@
     <title>Hello, world!</title>
 </head>
 <body>
+<div th:replace="fragments/top_menu"> </div>
 <div class="container">
 
     <h1>Add Customer</h1>
     <form action="/createCustomer" method="post">
         <div class="form-group">
-            <input type="text" name="fName" class="form-control" placeholder="please enter first name ">
+            <input type="text" name="fName" class="form-control" placeholder="Please enter first name" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="lName" class="form-control" placeholder="Please enter last name ">
+            <input type="text" name="lName" class="form-control" placeholder="Please enter last name" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="Address" class="form-control" placeholder="please enter address ">
+            <input type="text" name="Address" class="form-control" placeholder="Please enter address" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="phone_number" class="form-control" placeholder="please enter phone nummber ">
+            <input type="number" name="phone_number" class="form-control" placeholder="Please enter phone number" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="email" class="form-control" placeholder="please enter email ">
+            <input type="email" name="email" class="form-control" placeholder="Please enter email" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="driverLicense" class="form-control" placeholder="please enter driver license ">
+            <input type="text" name="driverLicense" class="form-control" placeholder="Please enter driver license" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

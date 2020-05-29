@@ -12,23 +12,23 @@
         <input type="hidden" name="id" th:value="${order.id}">
         <div class="form-group">
             <p>Date of reservation:</p>
-            <input type="text" name="reservationDate" th:value="${order.reservationDate}" class="form-control">
+            <input type="date" name="reservationDate" th:value="${order.reservationDate}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Start date:</p>
-            <input type="text" name="startDate" th:value="${order.startDate}" class="form-control">
+            <input type="date" name="startDate" th:value="${order.startDate}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>End date:</p>
-            <input type="text" name="EndDate" th:value="${order.endDate}" class="form-control">
+            <input type="date" name="EndDate" th:value="${order.endDate}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Car ID:</p>
-            <input type="text" name="reservedCar" th:value="${order.reservedCar}" class="form-control">
+            <input type="number" name="reservedCar" th:value="${order.reservedCar}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Customer ID:</p>
-            <input type="text" name="customer" th:value="${order.customer}" class="form-control">
+            <input type="number" name="customer" th:value="${order.customer}" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
     </form>

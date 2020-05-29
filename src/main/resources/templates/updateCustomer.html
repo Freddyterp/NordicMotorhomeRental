@@ -12,27 +12,27 @@
             <input type="hidden" name="idCustomers" th:value="${customer.idCustomers}">
         <div class="form-group">
             <p>First Name:</p>
-            <input type="text" name="fName" th:value="${customer.fName}" class="form-control">
+            <input type="text" name="fName" th:value="${customer.fName}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Last Name:</p>
-            <input type="text" name="lName" th:value="${customer.lName}" class="form-control">
+            <input type="text" name="lName" th:value="${customer.lName}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Adresse:</p>
-            <input type="text" name="Address" th:value="${customer.Address}" class="form-control">
+            <input type="text" name="Address" th:value="${customer.Address}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Phone number</p>
-            <input type="text" name="phone_number" th:value="${customer.phone_number}" class="form-control">
+            <input type="number" name="phone_number" th:value="${customer.phone_number}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>email</p>
-            <input type="text" name="email" th:value="${customer.email}" class="form-control">
+            <input type="email" name="email" th:value="${customer.email}" class="form-control" required>
         </div>
         <div class="form-group">
             <p>Driver License</p>
-            <input type="text" name="driverlicense" th:value="${customer.driverlicense}" class="form-control">
+            <input type="text" name="driverlicense" th:value="${customer.driverlicense}" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
     </form>
