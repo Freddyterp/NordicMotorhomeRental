@@ -13,38 +13,34 @@
     <title>Nordic Motorhome Rental</title>
 </head>
 <body>
-<div class = "container">
-    <form action="/create_rental" method="post">
-
-    </form>
-</div>>
+<div th:replace="fragments/top_menu"> </div>
 <div class="container">
 
     <h1>Create rental</h1>
     <form action="/create_rental" method="post">
         <div class="form-group">
             <p>Date of reservation</p>
-            <input type="text" name="reservationDate" class="form-control" placeholder="yyyy-mm-dd">
+            <input type="date" name="reservationDate" class="form-control" placeholder="YYYY-MM-DD" required>
         </div>
 
         <div class="form-group">
             <p>start date of the rental</p>
-            <input type="text" name="startDate" class="form-control" placeholder="yyyy-mm-dd">
+            <input type="date" name="startDate" class="form-control" placeholder="YYYY-MM-DD" required>
         </div>
 
         <div class="form-group">
             <p>end date of the rental</p>
-            <input type="text" name="endDate" class="form-control" placeholder="yyyy-mm-dd">
+            <input type="date" name="endDate" class="form-control" placeholder="YYYY-MM-DD" required>
         </div>
 
         <div class="form-group">
             <p>Car ID</p>
-            <input type="text" name="reservedCar" class="form-control" placeholder="please enter the ID of the car you want to rental ">
+            <input type="number" name="reservedCar" class="form-control" placeholder="Please enter the ID of the car you want to rental" required>
         </div>
 
         <div class="form-group">
             <p>Customer ID</p>
-            <input type="text" name="customer" class="form-control" placeholder="please enter the customer ID ">
+            <input type="number" name="customer" class="form-control" placeholder="Please enter the customer ID" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

@@ -13,28 +13,29 @@
     <title>Hello, world!</title>
 </head>
 <body>
+<div th:replace="fragments/top_menu"> </div>
 <div class="container">
 
     <h1>Add motorhome</h1>
     <form action="/create" method="post">
         <div class="form-group">
-            <input type="text" name="model" class="form-control" placeholder="please enter model ">
+            <input type="text" name="model" class="form-control" placeholder="Please enter model" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="brand" class="form-control" placeholder="please enter brand ">
+            <input type="text" name="brand" class="form-control" placeholder="Please enter brand" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="yearOfManufacture" class="form-control" placeholder="please enter year of manufacture ">
+            <input type="number" name="yearOfManufacture" class="form-control" placeholder="Please enter year of manufacture" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="yearOfPurchase" class="form-control" placeholder="please enter year of purchase ">
+            <input type="number" name="yearOfPurchase" class="form-control" placeholder="Please enter year of purchase" required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="sleepingSpots" class="form-control" placeholder="please enter amount of sleeping spots ">
+            <input type="number" name="sleepingSpots" class="form-control" placeholder="Please enter amount of sleeping spots" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
