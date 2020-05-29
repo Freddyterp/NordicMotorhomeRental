@@ -2,6 +2,10 @@
 <html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
     <div th:replace="fragments/header_scripts"> </div>
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+
 </head>
 <body>
 
@@ -9,8 +13,8 @@
 </div>
 
 <div class="container">
-    <h1>Rental Cars</h1>
-    <p>Library of cars available for rental </p>
+    <h1>Motorhomes</h1>
+
     <!-- Tilføj Student knap -->
     <a th:href="@{/create/}"
        class="btn btn-success">
@@ -25,27 +29,30 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Enrollment Date</th>
-            <th scope="col"></th>
+            <th scope="col">Brand</th>
+            <th scope="col">Model</th>
+            <th scope="col">Sleeping Spots</th>
+            <th scope="col">Year of Manufacture</th>
+            <th scope="col">Year of Purchase</th>
+
         </tr>
         </thead>
         <tbody>
-        <tr th:each="item : ${items}">
-            <th th:text="${item.id}"></th>
-            <th th:text="${item.name}" />
-            <th th:text="${item.price}" />
-            <th></th>
+        <tr th:each="car : ${cars}">
+            <th th:text="${car.idCars}"></th>
+            <th th:text="${car.brand}" ></th>
+            <th th:text="${car.model}" ></th>
+            <th th:text="${car.sleepingSpots}" ></th>
+            <th th:text="${car.yearOfManufacture}" ></th>
+            <th th:text="${car.yearOfPurchase}" ></th>
+
             <th>
-                <a th:href="@{'/details/' + ${item.id}}">
-                    <button  type="button" class="btn btn-success">Details</button>
-                </a>
-                <a th:href="@{'/update/' + ${item.id}}">
+
+                <a th:href="@{'/update/' + ${car.idCars}}">
                     <button  type="button" class="btn btn-primary">Edit</button>
                 </a>
-                <a th:href="@{'/delete/' + ${item.id}}">
-                    <button type="button" class="btn btn-danger" onclick="if (!(confirm('Are you sure you want to delete this car?'))) return false">Delete</button>
+                    <a th:href="@{'/delete/' + ${car.idCars}}">
+                    <button type="button" class="btn btn-danger" onclick="if (!(confirm('Are you sure you want to delete this motorhome?'))) return false">Delete</button>
 
                 </a>
             </th>

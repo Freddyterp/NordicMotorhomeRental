@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/header_scripts"> </div>
+    <title>Hello, world!</title>
+</head>
+<body>
+<div th:replace="fragments/top_menu"> </div>
+<div class="container" >customer
+    <h1> Update </h1>
+    <form action="/updateCustomer" method="post">
+            <input type="hidden" name="idCustomers" th:value="${customer.idCustomers}">
+        <div class="form-group">
+            <p>First Name:</p>
+            <input type="text" name="fName" th:value="${customer.fName}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Last Name:</p>
+            <input type="text" name="lName" th:value="${customer.lName}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Adresse:</p>
+            <input type="text" name="Address" th:value="${customer.Address}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Phone number</p>
+            <input type="text" name="phone_number" th:value="${customer.phone_number}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>email</p>
+            <input type="text" name="email" th:value="${customer.email}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Driver License</p>
+            <input type="text" name="driverlicense" th:value="${customer.driverlicense}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>
+<div th:replace="fragments/bottom_scripts">
+</div>
+</div>
+</body>
+</html>

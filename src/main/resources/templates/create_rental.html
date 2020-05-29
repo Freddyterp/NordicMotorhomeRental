@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link   rel="stylesheet" href="../main.css">
+
+    <title>Nordic Motorhome Rental</title>
+</head>
+<body>
+<div class = "container">
+    <form action="/create_rental" method="post">
+
+    </form>
+</div>>
+<div class="container">
+
+    <h1>Create rental</h1>
+    <form action="/create_rental" method="post">
+        <div class="form-group">
+            <p>Date of reservation</p>
+            <input type="text" name="reservationDate" class="form-control" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div class="form-group">
+            <p>start date of the rental</p>
+            <input type="text" name="startDate" class="form-control" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div class="form-group">
+            <p>end date of the rental</p>
+            <input type="text" name="endDate" class="form-control" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div class="form-group">
+            <p>Car ID</p>
+            <input type="text" name="reservedCar" class="form-control" placeholder="please enter the ID of the car you want to rental ">
+        </div>
+
+        <div class="form-group">
+            <p>Customer ID</p>
+            <input type="text" name="customer" class="form-control" placeholder="please enter the customer ID ">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>
+</body>
+</html>

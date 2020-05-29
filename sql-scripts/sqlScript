@@ -1,0 +1,83 @@
+-- MySQL Workbench Forward Engineering
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+-- -----------------------------------------------------
+-- Table `mydb`.`Cars`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Cars` (
+  `idCars` INT NOT NULL AUTO_INCREMENT,
+  `model` VARCHAR(45) NULL,
+  `brand` VARCHAR(45) NULL,
+  `yearOfManufacture` VARCHAR(45) NULL,
+  `yearOfPurchase` VARCHAR(45) NULL,
+  `sleepingSpots` VARCHAR(45) NULL,
+  PRIMARY KEY (`idCars`))
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `mydb`.`Customers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Customers` (
+  `idCustomers` INT NOT NULL AUTO_INCREMENT,
+  `fName` VARCHAR(45) NULL,
+  `lName` VARCHAR(45) NULL,
+  `Address` VARCHAR(45) NULL,
+  `phone_number` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `driverlicense` VARCHAR(45) NULL,
+  PRIMARY KEY (`idCustomers`))
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `mydb`.`Orders`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Orders` (
+  `idOrders` INT NOT NULL AUTO_INCREMENT,
+  `price` FlOAT NULL,
+  `reservationDate` DATE NULL,
+  `startDate` DATE NULL,
+  `endDate` DATE NULL,
+  `Cars_idCars` INT NOT NULL,
+  `Customers_idCustomers` INT NOT NULL,
+  PRIMARY KEY (`idOrders`),
+  INDEX `fk_Orders_Cars_idx` (`Cars_idCars` ASC) VISIBLE,
+  INDEX `fk_Orders_Customers1_idx` (`Customers_idCustomers` ASC) VISIBLE,
+  CONSTRAINT `fk_Orders_Cars`
+    FOREIGN KEY (`Cars_idCars`)
+    REFERENCES `mydb`.`Cars` (`idCars`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Orders_Customers1`
+    FOREIGN KEY (`Customers_idCustomers`)
+    REFERENCES `mydb`.`Customers` (`idCustomers`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+--------------------------------------------------
+-- Table structure for table `Users`
+--------------------------------------------------
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  `enabled` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+);
+
+INSERT INTO `users` (`username`,`password`,`role`,`enabled`)
+VALUES ('admin',
+'$2y$12$YcezAHiZ/Nln5TmG8oXmi.qfs1Gem0XohkRCQh.VoMXfnpTolnBl2',
+'ROLE_ADMIN', 1);
