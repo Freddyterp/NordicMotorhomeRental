@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
+
+//Frederik
 @Entity
 public class Order {
 

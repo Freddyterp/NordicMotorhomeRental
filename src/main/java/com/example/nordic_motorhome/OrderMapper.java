@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//Frederik
 public class OrderMapper implements RowMapper<Order> {
     public Order mapRow(ResultSet rs, int nownum) throws SQLException{
         Order order = new Order();

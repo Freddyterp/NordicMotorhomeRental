@@ -1,5 +1,6 @@
 package com.example.nordic_motorhome.Models;
 
+//Mohammad (Benjamin support)
 public class Customer {
     private int idCustomers;
     private String fName;
