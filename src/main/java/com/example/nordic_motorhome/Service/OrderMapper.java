@@ -1,4 +1,4 @@
-package com.example.nordic_motorhome;
+package com.example.nordic_motorhome.Service;
 
 import com.example.nordic_motorhome.Models.Order;
 

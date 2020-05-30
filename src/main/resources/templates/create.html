@@ -1,7 +1,9 @@
 <!-- Benjamin / Theis -->
 
+<!-- Benjamin / Theis -->
+
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +14,7 @@
 
     <link   rel="stylesheet" href="../main.css">
 
-    <title>Nordic motorhome</title>
+    <title>Hello, world!</title>
 </head>
 <body>
 <div th:replace="fragments/top_menu"> </div>
@@ -21,22 +23,27 @@
     <h1>Add motorhome</h1>
     <form action="/create" method="post">
         <div class="form-group">
+            <p>Model:</p>
             <input type="text" name="model" class="form-control" placeholder="Please enter model" required>
         </div>
 
         <div class="form-group">
+            <p>Brand:</p>
             <input type="text" name="brand" class="form-control" placeholder="Please enter brand" required>
         </div>
 
         <div class="form-group">
+            <p>Year of manufacture:</p>
             <input type="number" name="yearOfManufacture" class="form-control" placeholder="Please enter year of manufacture" required>
         </div>
 
         <div class="form-group">
+            <p>Year of purchase:</p>
             <input type="number" name="yearOfPurchase" class="form-control" placeholder="Please enter year of purchase" required>
         </div>
 
         <div class="form-group">
+            <p>Number of sleeping spots:</p>
             <input type="number" name="sleepingSpots" class="form-control" placeholder="Please enter amount of sleeping spots" required>
         </div>
 
@@ -46,10 +53,7 @@
 
 </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<div th:replace="fragments/bottom_scripts"> </div>
+
 </body>
 </html>
