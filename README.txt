@@ -12,3 +12,5 @@
     PASS: admin123
 
 3.  Access functions from the top menu and colored buttons
+
+if you have problems with the timezone on your database run this SQL statement SET GLOBAL time_zone = '+2:00' that should fix it.
