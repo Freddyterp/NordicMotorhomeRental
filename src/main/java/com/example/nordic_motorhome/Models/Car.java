@@ -5,7 +5,7 @@ import javax.persistence.Id;
 //Theis (Benjamin support)
 @Entity
 public class Car {
-
+    // This is a Java bean - Here we have created all variables, made a constructor and created getters and setters
     @Id
     private int idCars;
     private String model;

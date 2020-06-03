@@ -1,7 +1,15 @@
 package com.example.nordic_motorhome.Models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 //Mohammad (Benjamin support)
+@Entity
 public class Customer {
+
+    // This is a Java bean - Here we have created all variables, made a constructor and created getters and setters
+
+    @Id
     private int idCustomers;
     private String fName;
     private String lName;

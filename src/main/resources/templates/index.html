@@ -14,7 +14,7 @@
 
     <h1>Motorhomes</h1>
 
-    <!-- Tilføj Student knap -->
+    <!-- Create a new car button -->
     <a th:href="@{/create/}"
        class="btn btn-success">
         Create
@@ -23,7 +23,7 @@
     <br>
     <br>
 
-
+    <!-- Creating a table and looping trough our car database to get all the data inserted into the tabel -->
     <table class="table table-striped">
         <thead>
         <tr>
@@ -46,7 +46,7 @@
             <th th:text="${car.yearOfPurchase}" ></th>
 
             <th>
-
+                <!-- Inserting buttons for each car which are doing something by its id -->
                 <a th:href="@{'/update/' + ${car.idCars}}">
                     <button  type="button" class="btn btn-primary">Edit</button>
                 </a>

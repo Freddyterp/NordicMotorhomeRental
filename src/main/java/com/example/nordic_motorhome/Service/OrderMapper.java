@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 //Frederik
+
+// Creating a rowMapper to help us handling the Mappings for orders
 public class OrderMapper implements RowMapper<Order> {
     public Order mapRow(ResultSet rs, int nownum) throws SQLException{
         Order order = new Order();

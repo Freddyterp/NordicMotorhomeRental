@@ -11,9 +11,11 @@ import java.util.List;
 @Service
 public class CarService {
 
+    // Creating a new object called carRepo
     @Autowired
     CarRepo carRepo;
 
+    // Service methods where we would clean up the data if needed - Pattern pure fabrication
     public List<Car> fetchAllItems(){
         return carRepo.fetchAllItems();
     }

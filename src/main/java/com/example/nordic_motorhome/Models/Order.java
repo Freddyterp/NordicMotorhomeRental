@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 @Entity
 public class Order {
 
-
+    // This is a Java bean - Here we have created all variables, made a constructor and created getters and setters
     @Id
     private int id;
     private float price;

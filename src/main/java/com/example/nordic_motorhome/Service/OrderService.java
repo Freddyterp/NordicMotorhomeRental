@@ -11,11 +11,11 @@ import java.util.List;
 // Frederik
 @Service
 public class OrderService {
-
+    // Creating a new object called Repo
     @Autowired
     OrderRepo Repo;
 
-
+    // Service methods where we would clean up the data if needed - Pattern pure fabrication
     public List<Order> fecthAllItems() {return Repo.fetchAllItems();}
 
     public void addOrder(Order newOrder)

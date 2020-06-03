@@ -13,10 +13,11 @@ import java.util.List;
 @Service
 public class CustomerService
 {
-
+    // Creating a new object called customerRepo
     @Autowired
     CustomerRepo customerRepo;
 
+    // Service methods where we would clean up the data if needed - Pattern pure fabrication
     public List<Customer> fetchAllItems(){
         return customerRepo.fetchAllItems();
     }

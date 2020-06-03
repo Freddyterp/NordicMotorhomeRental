@@ -20,13 +20,14 @@ import static org.mockito.Mockito.when;
 class NordicMotorhomeApplicationTests {
 
 
-
+    //Arrange objects for use in tests
     @Autowired
     private CarService service;
 
     @MockBean
     private CarRepo repo;
 
+    //Test for getter method
     @Test
     public void getModelTest(){
         //arrange
@@ -37,6 +38,8 @@ class NordicMotorhomeApplicationTests {
         //assert
         assertEquals(expected, actual);
     }
+
+    //Test using mockito method when().then() for fetchAllItems()
     @Test
     public void fetchAllItemsTest() {
         when(repo.fetchAllItems()).thenReturn(
@@ -47,6 +50,8 @@ class NordicMotorhomeApplicationTests {
                         .collect(Collectors.toList()));
         assertEquals(2, service.fetchAllItems().size());
     }
+
+    //Test using mockito framework for method findById()
     @Test
     public void findByIdTest(){
         int testId = 800;

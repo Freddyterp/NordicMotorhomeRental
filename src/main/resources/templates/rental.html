@@ -6,13 +6,12 @@
     <div th:replace="fragments/header_scripts"> </div>
 </head>
 <body>
-
 <div th:replace="fragments/top_menu">
 </div>
 
 <div class="container">
     <h1> All Rentals</h1>
-    <!-- tilføj ny bestilling knap--->
+    <!-- Button to create new order--->
     <a th:href="@{/create_rental/}"
        class="btn btn-success">
         Create New Rental
@@ -21,6 +20,7 @@
     <br>
     <br>
 
+    <!-- Creating a table and looping trough our order database to get all the data inserted into the tabel -->
     <table class="table table-striped">
         <thead>
         <tr>
@@ -47,7 +47,7 @@
             <th th:text="${order.customer}"></th>
 
             <th>
-
+                <!-- Inserting buttons for each order which are doing something by its id -->
                 <a th:href="@{'/update_rental/' + ${order.id}}">
                     <button  type="button" class="btn btn-primary">Edit</button>
                 </a>

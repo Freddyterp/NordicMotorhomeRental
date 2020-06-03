@@ -19,6 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    // Implementing users and better security for password with BCrypt
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().passwordEncoder(new BCryptPasswordEncoder())
@@ -28,7 +29,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         ;
     }
 
-    //Kan være farligt at disable CSRF?????
+    //Overriding configure metode to allow resources to be loaded when logged in
+    // Also allowing us to use our own login page
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
